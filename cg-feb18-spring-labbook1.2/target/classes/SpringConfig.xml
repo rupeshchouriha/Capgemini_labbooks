@@ -1,0 +1,23 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<!-- Dependency injection -->
+
+	<bean id="employee" class="cg.feb18.spring.labbook.model.Employee">
+	<property name="employeeId" value="101"></property>
+	<property name="employeeName" value="Rupesh"></property>
+	<property name="salary" value="57000"></property>
+	<property name="bussinessUnit" value="Senior Software Engineer"></property>
+	<property name="age" value="23"></property>
+	
+	</bean>
+	
+	<bean id="sbu" class="cg.feb18.spring.labbook.model.Sbu">
+	<property name="sbuCode" value="102"></property>
+	<property name="sbuName" value="shubham"></property>
+	<property name="sbuHead" value="low code developer"></property></bean>
+	
+
+</beans>

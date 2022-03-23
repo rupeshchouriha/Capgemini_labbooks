@@ -1,0 +1,39 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<!-- Dependency injection -->
+
+	<bean id="e1" class="cg.feb18.spring.labbook.model.Employee">
+		<property name="employeeId" value="101"></property>
+		<property name="employeeName" value="Piyush"></property>
+		<property name="salary" value="88000"></property>
+
+	</bean>
+	<bean id="e2" class="cg.feb18.spring.labbook.model.Employee">
+		<property name="employeeId" value="102"></property>
+		<property name="employeeName" value="Devesh"></property>
+		<property name="salary" value="96000"></property>
+
+	</bean>
+	<bean id="e3" class="cg.feb18.spring.labbook.model.Employee">
+		<property name="employeeId" value="103"></property>
+		<property name="employeeName" value="Parth"></property>
+		<property name="salary" value="84000"></property>
+
+	</bean>
+
+	<bean id="employee" class="cg.feb18.spring.labbook.model.Sbu">
+		<property name="sbuCode" value="102"></property>
+		<property name="sbuName" value="Rupesh"></property>
+		<property name="sbuHead" value="Mr. Abc"></property>
+		<property name="emp">
+			<list value-type="cg.feb18.spring.labbook.model.Employee">
+				<ref bean="e1" />
+				<ref bean="e2" />
+				<ref bean="e3" />
+			</list>
+		</property>
+	</bean>
+</beans>
